@@ -109,6 +109,13 @@ def send_message(message: str, receiver: str, wait_time: int) -> None:
                 hotkey("shift", "enter")
             else:
                 typewrite(char)
+    else:
+        typewrite(" ")
+    if system().lower() == "darwin":
+        hotkey("command", "v")
+    else:
+        hotkey("ctrl", "v")
+    time.sleep(1)
     findtextbox()
     press("enter")
 
